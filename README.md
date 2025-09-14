@@ -1,6 +1,6 @@
-# Sakila MySQL 9.4 Docker Image
+# Sakila MySQL 8.0 Docker Image
 
-A ready-to-use Docker image with MySQL 9.4 and the Sakila sample database pre-installed.
+A ready-to-use Docker image with MySQL 8.0 and the Sakila sample database pre-installed.
 
 ## Quick Start
 
@@ -42,7 +42,7 @@ docker run -d --name sakila-mysql -p 3306:3306 sakila-mysql:latest
 
 ## Database Details
 
-- **MySQL Version**: 9.4.0
+- **MySQL Version**: 8.0
 - **Database Name**: `sakila`
 - **Root Password**: `root`
 - **User**: `sakila` / Password: `sakila`
