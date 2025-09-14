@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  sakila-mysql:
+    build: .
+    container_name: sakila-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: sakila
+      MYSQL_USER: sakila
+      MYSQL_PASSWORD: sakila
+    ports:
+      - "3306:3306"
+    volumes:
+      - sakila_data:/var/lib/mysql
+      - ./logs:/var/log/mysql
+    networks:
+      - sakila-network
+    restart: unless-stopped
+    command: --default-authentication-plugin=mysql_native_password
+
+volumes:
+  sakila_data:
+    driver: local
+
+networks:
+  sakila-network:
+    driver: bridge

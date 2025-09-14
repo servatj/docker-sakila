@@ -1,0 +1,6 @@
+sakila-db.tar.gz
+README.md
+.git
+.gitignore
+logs/
+*.log
